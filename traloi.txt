@@ -1,0 +1,28 @@
+Câu 4: Khi nhấn nút back và bật lại ứng dụng các phương thức chạy lần lượt là:
+   Nhấn back:
+        - onPause()
+        - onStop()
+        - onDestroy()
+   Bật lại:
+        - On Create()
+        - On Start()
+        - On Resume()
+Câu 5: Khi nhấn nút home sau đó mở lại ứng dụng các phương thức chạy lần lượt là:
+    Nhấn home:
+        - onPause()
+        - onStop()
+    Mở lại:
+        - On Restart()
+        - On Start()
+        - On Resume()
+Câu 6: Thực hiện phương thức vòng đời onPause(), onStop() để lưu lại thông tin ứng dụng để khôi
+phục lại trạng thái hiển thị của ứng dụng khi chạy lại.
+
+onPause() là phương thức duy nhất đảm bảo được gọi trước khi tiến trình bị hủy onStop()
+và onDestroy() có thể không được gọi. Tuy nhiên onPause() lại được gọi khá nhiều lần trong vòng
+đời của Activity ví dụ như 1 của sổ pop up hiện lên che khuất một phần của Activity (nhìn thấy
+nhưng không tương tác được) thì onPause() được gọi. onStop() được gọi khi Activity bị che khuất
+hoàn toàn bởi một màn hình khác, ứng dụng nào đó vào foreground, hoặc người dùng ấn nút home.
+Lúc này thì có thể dùng onStop() để lưu trữ dữ liệu ứng dụng, giải phóng các tài nguyên đang dùng,
+ngưng các IPA đang gọi dang dở.
+
